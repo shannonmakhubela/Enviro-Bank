@@ -1,3 +1,7 @@
+/*
+ * @author Shannon Makhubela
+ */
+
 import java.io.IOException;
 import java.math.*;
 import java.util.*;
@@ -74,6 +78,7 @@ public class Main {
 	     					print("Amount withdrawn :" + R_amount);
 	     					print("Remainining balance :" + savings.getBalance());
 	     					print("----------------------------------------------");
+	     					print("---------- Transaction Complete ---------");
 	     					in.close();
 	     					run = false ;
 	     				}
@@ -87,7 +92,7 @@ public class Main {
 	     				
 	     				
 	     			}else {
-	     				print("invalid account Entered");
+	     				System.err.println(("invalid account Entered"));
 	     				counter -- ;
 	     			}
 	     			if(counter <= 0) {
@@ -130,6 +135,7 @@ public class Main {
 	     					print("Amount withdrawn :" + R_amount);
 	     					print("Remainining balance :" + current.getBalance());
 	     					print("----------------------------------------------");
+	     					print("---------- Transaction Complete ---------");
 	     					in.close();
 	     					run = false ;
 	     				}

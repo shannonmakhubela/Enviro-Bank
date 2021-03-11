@@ -1,12 +1,17 @@
+/*
+ * @author Shannon Makhubela
+ */
+
 package com.eviro.assessment.grad001.ShannonMakhubela;
 import java.math.*;
 
-public class SavingsAccount {
+public class SavingsAccount implements AccountService {
 	
 	private int id ;
 	private final BigDecimal Min = new BigDecimal(1000); ;
 	private String accountnum;
 	private BigDecimal balance ;
+	
 	
 	public SavingsAccount(int id,String accountnum, BigDecimal balance) {
 		this.id = id ;
@@ -15,7 +20,8 @@ public class SavingsAccount {
 	}
 	
 	//withdraw function.
-	public void withdraw(String accountnum , BigDecimal Req_Amaount) throws WithdrawalAmountTooLargeException {
+	@Override
+	public void withdraw(String accountnum, BigDecimal Req_Amaount) throws WithdrawalAmountTooLargeException {
 		
 		//check balance.
 		BigDecimal temp = getBalance().subtract(Req_Amaount) ;
@@ -26,7 +32,17 @@ public class SavingsAccount {
 		}
 		
 	}
-	
+//	public void withdraw(String accountnum , BigDecimal Req_Amaount) throws WithdrawalAmountTooLargeException {
+//		
+//		//check balance.
+//		BigDecimal temp = getBalance().subtract(Req_Amaount) ;
+//		if( Min.compareTo(temp) <= 0) {
+//			setBalance(temp); //set the new Account Balance
+//		}else {
+//			 throw new WithdrawalAmountTooLargeException("Amount entered is more than available.");
+//		}
+//		
+//	}
 	
 	//get and setters.
 	public int getId() {
@@ -47,6 +63,8 @@ public class SavingsAccount {
 	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
 	}
+
+
 	
 	
 

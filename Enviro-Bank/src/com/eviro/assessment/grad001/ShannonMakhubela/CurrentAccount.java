@@ -1,7 +1,10 @@
+/*
+ * @author Shannon Makhubela
+ */
 package com.eviro.assessment.grad001.ShannonMakhubela;
 import java.math.*;
 
-public class CurrentAccount {
+public class CurrentAccount implements AccountService {
 	
 	private int id ;
 	private String account_num ;
@@ -20,6 +23,7 @@ public class CurrentAccount {
 		
 	}
 	// withdraw function.
+	@Override
 	public void withdraw(String accountNum , BigDecimal req_Amount) throws WithdrawalAmountTooLargeException {
 		
 		

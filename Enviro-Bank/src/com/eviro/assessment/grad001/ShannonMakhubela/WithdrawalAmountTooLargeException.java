@@ -1,3 +1,7 @@
+/*
+ * @author Shannon Makhubela
+ */
+
 package com.eviro.assessment.grad001.ShannonMakhubela;
 
 public class WithdrawalAmountTooLargeException extends Exception {
